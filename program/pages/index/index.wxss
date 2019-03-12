@@ -1,0 +1,335 @@
+/* pages/index/index.wxss */
+
+/* input {
+  display: block;
+  padding: 10rpx 0;
+} */
+page{
+  background: #f6f6f6;
+}
+view{
+  background: #fff;
+}
+
+.search {
+  background: linear-gradient(to right, #fe6d7f, #e81556);
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.focus {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 5;
+}
+
+.focusTop {
+  display: flex;
+  align-items: center;
+  margin-top: 18rpx;
+}
+
+.focusSearch {
+  background: #ebebeb;
+  width: 520rpx;
+  height: 50rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  width: 200rpx;
+  margin-left: 20rpx;
+}
+
+.searchButton p {
+  width: 90rpx;
+  height: 56rpx;
+  font-size: 27rpx;
+  text-align: center;
+  padding: 0;
+  line-height: 56rpx;
+  background: #ea1c5a;
+  color: #fff;
+  border-radius: 8rpx;
+}
+
+.searchButton p:last-child {
+  background: #fff;
+  color: #000;
+  margin-left: 10rpx;
+}
+
+.sousuo {
+  font-size: 25rpx;
+}
+
+/* tabbar样式 */
+
+.topTab {
+  display: flex;
+}
+
+.tabItem {
+  flex: 1;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.tabItem text {
+  font-size: 30rpx;
+  display: block;
+  width: 90%;
+  padding: 13rpx 0;
+  margin: 0 auto;
+}
+
+.selected {
+  color: #f23b5e;
+  border-bottom: 5rpx solid #f23b5e;
+}
+
+/* currentIndex显示页面 */
+
+.tag {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.tag image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.tag text {
+  margin-left: 10rpx;
+}
+
+.goodsList {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goodsItem {
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+}
+
+.goodsItem text {
+  background: #efefef;
+  padding: 8rpx 10rpx;
+  border-radius: 20rpx;
+  color: #555;
+  font-size: 26rpx;
+}
+
+/* 搜索出来的列表 */
+.goodsLists{
+  width: 100%;
+  height: 100%;
+  border-top: 20rpx solid #f6f6f6;
+}
+
+.goodsLists-li{
+  width: 100%;
+  height: 260rpx;
+  padding-left: 2%;
+  border-bottom: 20rpx solid #f6f6f6;
+}
+
+.title{
+  width: 96%;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #dddcdc;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.content{
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.content view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+
+.shop{
+  height: 180rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.content-shop{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20rpx;
+}
+
+.yaojian{
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  color: #fff;
+  padding: 5rpx 20rpx;
+  width: 64rpx;
+  border-radius: 30rpx;
+  font-size: 25rpx;
+  text-align: center;
+  background: #f2365a;
+}
+
+/* 点击药检弹出页面 */
+.show-textBackg{
+  background: #000;
+  opacity:0.8;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.show-close{
+  width: 40rpx;
+  height: 40rpx;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 15;
+}
+
+.show-text{
+  width: 74%;
+  height: 900rpx;
+  background: #fff;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  margin: 15% 10%;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  padding: 3%;
+}
+
+/* 胜强综合市场 */
+
+.sqMall {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rpx 0;
+}
+
+.sqMall text {
+  font-size: 26rpx;
+  color: #999;
+  letter-spacing: 2rpx;
+}
+
+.sqMall text:last-child {
+  color: #f2365a;
+  margin-left: 20rpx;
+  border: 2rpx solid #f2365a;
+  padding: 0 16rpx;
+  border-radius: 34rpx;
+}
+
+/* 轮播图 */
+
+/* 分类 */
+
+.sort {
+  width: 100%;
+  height: 320rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sort text{
+  color: #000;
+  font-size: 28rpx;
+}
+
+.classify {
+  width: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 食谱 */
+
+.recipe {
+  width: 94%;
+  height: 150rpx;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 推荐 */
+
+.recommend {
+  /* border-top: 18rpx solid #efefef;
+  border-bottom: 18rpx solid #efefef; */
+  margin-top: 18rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #888;
+  padding: 10rpx 10rpx 10rpx 20rpx;
+}
+
+/* 活动推荐 */
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2%;
+}
+
+.hd {
+  height: 70rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.hdGoods {
+  height: 200rpx;
+  width: 100%;
+  background: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.goods{
+  display: flex;
+  flex-direction: column;
+}

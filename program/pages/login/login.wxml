@@ -1,0 +1,43 @@
+<!--pages/login/login.wxml-->
+<view>
+    <image bindtap="back" class="cancel" src="../../images/icon/close1.png"></image>
+    <image class="logo" mode="widthFix" src="../../images/logo.png"></image>
+    <image class="backgroundImg" src="../../images/loginbg.png"></image>
+    <view  class='login'>
+        <block wx:for="{{['密码登录','验证码登录']}}" wx:key='index'>
+            <view data-index='{{index}}' bindtap='tabChange'>
+                <text class="{{currentIndex==index?'selected':''}} loginText">{{item}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="inputBox" hidden='{{currentIndex!=0}}'>
+        <view class="item">
+            <image src="../../images/icon/user.png"></image>
+            <input class="itemText" type="number" bindinput='getPhoneNum' placeholder='手机号' maxlength='11'></input>
+        </view>
+        <view class="item">
+            <image src="../../images/icon/pass.png"></image>
+            <input class="itemText" bindinput="getPswd" placeholder='请输入密码' password='true'></input>
+        </view>
+        <button class="loginBtn" bindtap="doLogin">登陆</button>
+    </view>
+
+    <view class="inputBox" hidden='{{currentIndex!=1}}'>
+        <view class="item">
+            <image src="../../images/icon/user.png"></image>
+            <input class="itemText" type="text" bindinput='getPhoneNum' placeholder='手机号'></input>
+        </view>
+        <view class="item">
+            <image src="../../images/icon/pass.png"></image>
+            <input class="itemText" type="text" bindinput="getCodePswd" placeholder='请输入验证码'></input>
+            <text class="verification" bindtap="getVertificate" hidden='{{!showTime==0}}'>获取验证码</text>
+            <text class="verification" hidden='{{!showTime==1}}'>{{time}}</text>
+        </view>
+        <button class="loginBtn" bindtap="codeLogin">登陆</button>
+    </view>
+    
+    <view class="register">
+        <text bindtap='register'>用户注册</text>
+        <text bindtap='changePawd'>找回密码</text>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/recipeList/recipeList.wxss */
+
+.container{
+    background: #eee;
+}
+.item{
+    width:100%;
+    padding: 20rpx 0;
+    background: #fff;
+    margin:10rpx 0;
+}
+.itemTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left:20rpx;
+}
+.itemTop text{
+    color:#444;
+    margin-right:20rpx;
+}
+.itemContent{
+    margin-top:7rpx;
+    margin-left:20rpx;
+}
+.itemContent text{
+    color:#222;
+    font-size:34rpx;
+}

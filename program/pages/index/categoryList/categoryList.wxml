@@ -1,0 +1,44 @@
+<!--pages/categoryList/categoryList.wxml-->
+<import src="/pages/goodsInfoTemp/goodsInfoTemp.wxml" />
+<view class="container">
+  <!-- <view class="topItem">
+        <image src="../../images/icon/arrow-left.png" bindtap="urlBack"></image>
+        <text>蔬菜类</text>
+    </view> -->
+  <view class="list">
+    <!--左侧栏-->
+    <view class="leftTab">
+      <scroll-view scroll-y style='height:100%;'>
+        <view wx:for="{{category}}" wx:key="index" data-tab="{{item.id}}" class="{{currentIndex==item.id?'active':''}} title" bindtap="changeTab">
+          <text>{{item.name}}</text>
+        </view>
+      </scroll-view>
+    </view>
+    <!--右侧栏-->
+    <view class="rightContent">
+      <view>
+        <scroll-view scroll-y style='height:1000rpx;'>
+          <view class="item" wx:for="{{goodsCategory}}" wx:key="{{index}}">
+            <view class="itemName" bindtap="touchItem" data-id="{{item.id}}">
+              <image src="{{item.tp}}"></image>
+              <view class="itemFoodName">
+                <text>{{item.jxname}}</text>
+                <text>{{item.name}}</text>
+              </view>
+              <view class="tabImg">
+                <image hidden="{{currentTab==item.id?true:false}}" src="../../../images/icon/arrowbottom.png"></image>
+                <image hidden="{{currentTab==item.id?false:true}}" src="../../../images/icon/arrowTop.png" catchtap="getUp"></image>
+              </view>
+            </view>
+            <view hidden="{{currentTab==item.id?false:true}}">
+              <template is="tempGoodsContent" data="{{shopList}}"/>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+
+    </view>
+  </view>
+
+
+</view>

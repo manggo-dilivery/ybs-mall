@@ -1,0 +1,9 @@
+<!--pages/message/message.wxml-->
+<view class='indexContainer'>
+  <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+  <text class='userName'>{{userInfo.nickName}}</text>
+  <view class='goStudy' catchtap='handlerParent'>
+    <text catchtap='handlerChild'>open App</text>
+  </view>
+  <button style='display: {{isShow?"block":"none"}}' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+</view>

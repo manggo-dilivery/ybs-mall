@@ -1,0 +1,55 @@
+<!--pages/detail/detail.wxml-->
+<!-- 富文本内容 -->
+<view class="richText" style="width:94%;margin:0 auto">
+    <text>fsdffdsdfs方式方法的顺丰到付发生的事丰富的收费的方式的方式</text>
+    <text>fsdffdsdfs方式方法的顺丰到付发生的事丰富的收费的方式的方式</text>
+    <text>fsdffdsdfs方式方法的顺丰到付发生的事丰富的收费的方式的方式</text>
+    <text>fsdffdsdfs方式方法的顺丰到付发生的事丰富的收费的方式的方式</text>
+</view>
+<view class="bottom">
+    <view class="input">
+        <input placeholder="我有话要说" placeholder-class="saySth"></input>
+    </view>
+    <view class="func">
+        <view class="common">
+            <image src="../../../../images/icon/message_1.png"></image>
+            <text>提交</text>
+        </view>
+        <view class="common">
+            <image src="../../../../images/icon/Group529.png"></image>
+            <text>分享</text>
+        </view>
+        <view class="common">
+            <image src="../../../../images/icon/Group530.png"></image>
+            <text>点赞</text>
+        </view>
+    </view>
+</view>
+<!-- 右侧推荐内容 -->
+<view class="mark" bindtap="hideRecommend" hidden="{{currentIndex==isshow?false:true}}"></view>
+<view class="recommendBtn" bindtap="showRecommend"><text>推荐</text></view>
+<view class="recommend" animation="{{animation}}">
+    <view class="title"><text>菜谱推荐产品</text></view>
+    <view class="list">
+        <view class="item">
+            <view class="itemImage"><image src="../../../../images/fruit.jpg"></image></view>
+            <view class="itemContent">
+                <view class="contentTitle">
+                    <text>格子豆腐</text>
+                    <text>格子豆腐</text>
+                </view>
+                <view class="contentNum">
+                    <text bindtap='sub'>-</text>
+                    <!-- <input type="number" bindchange='inputChange' value="{{num}}"/> -->
+                    <text>{{num}}</text>
+                    <text bindtap='add'>+</text>
+                </view>
+                <view class="contentPrice">
+                    <text>￥1</text>
+                    <text>+</text>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/goodsInfoTemp/goodsInfoTemp.wxml-->
+<template name="tempGoodsContent">
+    <view class="tempGoodsInfo" wx:for="{{shopList}}" wx:key="{{index}}">
+        <view class="tempShopName" bindtap='shopPage' data-shopId='{{item.ctid}}'>
+            <image src="../../../images/icon/store.png"></image>
+            <text>{{item.ctname}}</text>
+            <image src="../../../images/icon/arrowLeft.png"></image>
+        </view>
+        <view class="tempFood" bindtap='goodsDetail' data-goodsid='{{item.id}}'>
+            <image mode="widthFix" src="{{item.tp}}"></image>
+            <view class="tempFoodName">
+                <text>{{item.ctname}}</text>
+                <text>库存</text>
+                <view class="tempFoodPrice">
+                    <text>￥{{item.dj}}</text>
+                    <text>/{{item.gg}}克</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

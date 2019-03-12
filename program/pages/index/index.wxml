@@ -1,0 +1,187 @@
+<!--pages/index/index.wxml-->
+<!-- 搜索栏 -->
+<!-- <view class='container'> -->
+<view class="search">
+  <view class="searchBox">
+    <icon class="search_image" type="search" size="13" color="#405f80"></icon>
+    <input type="text" placeholder='搜索商品、店铺、市场' placeholder-class='input_placeholder' bindfocus="onfocus"></input>
+  </view>
+  <view class="dragText" bindtap='tapword'>药检</view>
+</view>
+<!-- 获取焦点时出现的页面 -->
+<view class="focus" hidden="{{showSearch!=1}}">
+  <view class="focusTop">
+    <view class="focusSearch">
+      <icon class="search_image" type="search" size="13" color="#405f80"></icon>
+      <input class="sousuo" type="text" placeholder='搜索商品、店铺、市场' placeholder-class='input_placeholder' bindfocus="onfocus" focus="{{isfocus}}"></input>
+    </view>
+    <view class="searchButton">
+      <p class="doSearch">搜索</p>
+      <p bindtap='onblur' class="cancel">取消</p>
+    </view>
+  </view>
+  <view class="focusTab">
+    <view class='topTab'>
+      <block wx:for="{{['商品','商家','市场']}}" wx:key='index'>
+        <view data-index='{{index}}' bindtap='tabChange' class='tabItem'>
+          <text class="{{currentIndex==index?'selected':''}}">{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view wx:if="{{haveGoodsList==true&&currentIndex==0}}">
+    <view class='tag'>
+      <image src='../../images/tag.png'></image>
+      <text>搜索热门商品</text>
+    </view>
+    <view class='goodsList'>
+      <view class='goodsItem' data-text="{{text}}" wx:for="{{text}}">
+        <text data-index='{{index}}' bindtap='goodsDetail'>
+        <text>{{item.Title}}</text>
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索出来的列表 -->
+  <view class='goodsLists' wx:if="{{haveGoodsList==false&&currentIndex==0}}">
+    <view class='goodsLists-li' wx:for="{{goodsList}}">
+      <view class='title'>{{item.ctname}}</view>
+      <view class='content' bindtap='toGoods' data-index='{{index}}'>
+        <image src='{{item.tp}}' style='width:200rpx;height:160rpx;'></image>
+        <view>
+          <view>
+            <text style='color:#000;'>{{item.name}}</text>
+            <text style='font-size:26rpx;'>{{item.jj}}</text>
+          </view>
+          <text style='color:#f23b5e;'>¥{{item.dj}}<text style='color:#000;'>/{{item.gg}}{{item.jldwname}}</text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商家列表 -->
+  <view class='goodsLists' wx:if="{{haveGoodsList==false&&currentIndex==1}}">
+    <view class='goodsLists-li shop' wx:for="{{shopList}}" bindtap='toShop' data-index='{{index}}'>
+      <image src='{{item.xkz}}' style='width:200rpx;height:160rpx;'></image>
+      <view class='content-shop' data-index='{{index}}'>
+        <text style='color:#000;'>{{item.name}}</text>
+        <text style='font-size:26rpx;'>{{item.seat1}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 市场列表 -->
+  <view class='goodsLists' wx:if="{{haveGoodsList==false&&currentIndex==2}}">
+    <view class='goodsLists-li shop' wx:for="{{caichangList}}" bindtap='toShiChang' data-index='{{index}}'>
+      <image src='{{item.tp}}' style='width:200rpx;height:160rpx;'></image>
+      <view style='display:flex;flex-direction: column;justify-content: space-between;'>
+        <view class='content-shop' data-index='{{index}}'>
+          <text style='color:#000;'>{{item.name}}</text>
+          <text style='font-size:26rpx;'>{{item.seat1}}</text>
+        </view>
+        <view style=' margin-bottom: 20rpx;'>
+          <text class="yaojian" bindtap=''>药检</text>
+          <text>{{item.distanremark}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<!--点击药检出来的文字-->
+<view wx:if="{{showWord}}">
+  <view class='show-textBackg'></view>
+  <image src='../../images/icon/close1.png' class='show-close' bindtap='showClose'></image>
+  <view class='show-text'>
+    <scroll-view scroll-y="true" style='height:900rpx;'>
+      <view>你今天买的菜药检了吗？</view>
+      现在食品安全是大家都很关注的民生话题，那么老百姓每天一日三餐的食品安全问题最集中的地方是哪里？对了就是市场，无论是在家自己做的吃还是在外面点餐食物的来源就是市场。如何从源头上管控好我们的盘中餐，药检是必不可少的一项检测工作。那么到底药检是什么呢？ 药检就是药检是针对市场里面的 菜品抽样检查，这也代表了整个市场的情况了。检验食品中是否有对人体有害的物质（无机物、有机物、微生物），例如农药残留、重金属是否超标等。虽然大部分需要控制的并不是致命的，至少不是在短时间内就致人性命的，但是我们长期食用不达标的食品时间日积月累残留的有害物质会伤害我们的身体，出现病症或是导致病变。药检是由药检局来监管。
+      药监局用通俗易懂的话说就是食品安全政府的督查、监管、处罚的执法部门部门，专门审核食物是否安全，例如：今天的某家的猪肉是否合格，能否销售，不合格的要如何查处。药检和药监之间是不可分离的，药检不合格的需要药监局的督促查办。 目前与源本圣逛市场合作的市场都有专门的药检部门，我们所上的每个市场都会严格遵守药检局的检测制度，每天每个市场都发布最新的药检结果，消费者可以在平台上查看结果合格与否，让您能更放心的在源本圣逛市场里购买新鲜健康的食材。源本圣逛市场会与相关政府监督部门携手，一起为您的食品安全问题把关。
+      你今天买的菜药检了吗？ 现在食品安全是大家都很关注的民生话题，那么老百姓每天一日三餐的食品安全问题最集中的地方是哪里？对了就是市场，无论是在家自己做的吃还是在外面点餐食物的来源就是市场。如何从源头上管控好我们的盘中餐，药检是必不可少的一项检测工作。那么到底药检是什么呢？ 药检就是药检是针对市场里面的 菜品抽样检查，这也代表了整个市场的情况了。检验食品中是否有对人体有害的物质（无机物、有机物、微生物），例如农药残留、重金属是否超标等。虽然大部分需要控制的并不是致命的，至少不是在短时间内就致人性命的，但是我们长期食用不达标的食品时间日积月累残留的有害物质会伤害我们的身体，出现病症或是导致病变。药检是由药检局来监管。
+      药监局用通俗易懂的话说就是食品安全政府的督查、监管、处罚的执法部门部门，专门审核食物是否安全，例如：今天的某家的猪肉是否合格，能否销售，不合格的要如何查处。药检和药监之间是不可分离的，药检不合格的需要药监局的督促查办。 目前与源本圣逛市场合作的市场都有专门的药检部门，我们所上的每个市场都会严格遵守药检局的检测制度，每天每个市场都发布最新的药检结果，消费者可以在平台上查看结果合格与否，让您能更放心的在源本圣逛市场里购买新鲜健康的食材。源本圣逛市场会与相关政府监督部门携手，一起为您的食品安全问题把关。
+    </scroll-view>
+  </view>
+</view>
+<!-- 胜强综合市场 -->
+<view class="sqMall">
+  <text>{{marketName}}</text>
+  <text bindtap="changeMall">切换</text>
+</view>
+<!-- 轮播图 -->
+<swiper circular='true' indicator-dots="{{indicator}}" autoplay="true" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.Image}}" class="slide-image" style='width:750rpx; height:340rpx' />
+    </swiper-item>
+  </block>
+</swiper>
+<!--分类-->
+<view class='sort'>
+  <view class='classify' wx:for="{{classify}}" wx:key="index">
+    <view data-id='{{item.id}}' bindtap="categoryList" style='width:100%;height: 100%;display: flex;flex-direction: column;align-items: center;'>
+      <image src='{{item.tp}}' style='width:80%;border-radius:50%;'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class='classify' bindtap="moreCategory" wx:if="{{showMore}}">
+    <image src='../../images/category.png' style='width:80%;border-radius:50%;'></image>
+    <text>更多</text>
+  </view>
+
+</view>
+<!-- 美味食谱 -->
+<view class='recipe' bindtap='recipeList'>
+  <image src='../../images/mwsp.png' style='width:120rpx; height:120rpx;'></image>
+  <image src='../../images/600e63e25e419eb2742187d5d84ec875c856903aea79-YK1kZT_fw658@3x.png' style='width:200rpx; height:120rpx;'></image>
+</view>
+<!--附近市场推荐-->
+<view class='recommend'>
+  附近市场推荐 ·
+  <text style='color:#ff0000'>{{recommendMarket}}</text>
+</view>
+<!--活动推荐-->
+<view class='activities'>
+
+</view>
+<!--标题-->
+<!-- <view class='hd'>
+    <image src='../../images/icon/hdsp.png' style='width:30rpx;height:30rpx;margin-right:10rpx;'></image>
+    活动商品
+  </view> -->
+<!--活动商品-->
+<!-- <view class='hdGoods'>
+    <view wx:for="{{goods}}" style='width:50%;display: flex;flex-direction: row;'>
+      <image src='../../images/asset-2@3x.png' style='width:45%;height:85%;margin:5%'>{{}}</image>
+      <view class='goods' style='margin-top:5%;justify-content: space-between;width:40%;height:85%;'>
+        <view class='goods'>
+          <text style='color:#000;'>{{item.name}}</text>
+          <text style='color:#000;'>{{item.kg}}</text>
+          <text style='font-size:22rpx;'>{{item.word}}</text>
+        </view>
+        <text style='color:#ff0000;'>¥{{item.price}}</text>
+      </view>
+    </view>
+  </view> -->
+<!--标题-->
+<!-- <view class='hd'>
+    <image src='../../images/icon/tbtj.png' style='width:30rpx;height:30rpx;margin-right:10rpx;'></image>
+    特别推荐
+  </view> -->
+<!--特别推荐-->
+<!-- <view class='hdGoods'>
+    <view wx:for="{{goods}}" style='width:50%;display: flex;flex-direction: row;'>
+      <image src='../../images/asset-2@3x.png' style='width:45%;height:85%;margin:5%'>{{}}</image>
+      <view class='goods' style='margin-top:5%;justify-content: space-between;width:40%;height:85%;'>
+        <view class='goods'>
+          <text style='color:#000;'>{{item.name}}</text>
+          <text style='color:#000;'>{{item.kg}}</text>
+          <text style='font-size:22rpx;'>{{item.word}}</text>
+        </view>
+        <text style='color:#ff0000;'>¥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</view> -->
+<!-- </view> -->

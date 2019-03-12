@@ -1,0 +1,12 @@
+<!--pages/moreCategory/moreCategory.wxml-->
+<!-- <import src="/pages/template/top/top.wxml"/> -->
+<!-- <template is="top" data="{{title}}"/> -->
+<view class="sort">
+  <!-- <view class="empty"></view> -->
+  <view class='classify' wx:for="{{listData}}" wx:key="index">
+    <view data-id='{{item.id}}' bindtap="categoryList" style='width:100%;height: 100%;display: flex;flex-direction: column;align-items: center;'>
+      <image src='{{item.tp}}' class="imageStyle"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>

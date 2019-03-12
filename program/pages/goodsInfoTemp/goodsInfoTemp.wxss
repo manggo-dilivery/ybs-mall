@@ -1,0 +1,55 @@
+/* pages/goodsInfoTemp/goodsInfoTemp.wxss */
+.tempGoodsInfo{
+    padding:20rpx 0;
+    border-bottom:2rpx solid #eee;
+}
+.tempShopName{
+    display: flex;
+    align-items: center;
+    margin-left:20rpx;
+}
+.tempShopName image:first-of-type{
+    width:40rpx;
+    height: 40rpx;
+}
+.tempShopName text{
+    margin-left:10rpx;
+}
+.tempShopName image:last-of-type{
+    width:30rpx;
+    height: 30rpx;
+    margin-left:5rpx;
+}
+.tempFood{
+    display: flex;
+    align-content: space-around;
+    margin-top:20rpx;
+}
+.tempFood image{
+    width:150rpx;
+    /* height: 140rpx; */
+    /* border:1px solid #ddd; */
+}
+.tempFoodName{
+    margin-left:12rpx;
+}
+.tempFoodName > text{
+    display: block;
+}
+.tempFoodName > text:first-of-type{
+    color:#444;
+    margin-bottom:5rpx;
+}
+.tempFoodPrice{
+    margin-top:10rpx;
+}
+.tempFoodPrice text:first-child{
+    color:#e03f69;
+    font-size:34rpx;
+}
+.tempFood{
+    margin-left:26rpx;
+    /* border-bottom:1rpx solid #ddd; */
+    width:500rpx;
+    height: 170rpx;
+}

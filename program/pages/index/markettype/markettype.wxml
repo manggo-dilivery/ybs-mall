@@ -1,0 +1,28 @@
+<!--搜索栏-->
+<view class="searchBox">
+  <icon class="search_image" type="search" size="13" color="#405f80"></icon>
+  <input type="text" placeholder='搜索商品、店铺、市场' placeholder-class='input_placeholder' bindfocus="onfocus" style='font-size:25rpx;'></input>
+</view>
+<!--市场分类-->
+<view class="focusTab">
+  <!--左侧-->
+  <view class='topTab'>
+    <scroll-view scroll-y style='height:1000rpx;'>
+      <block wx:for="{{cateItems}}" wx:key='index'>
+        <view data-index='{{index}}' bindtap='tabChange' class='tabItem'>
+          <view class="{{currentIndex==index?'selected':''}}">{{item.qy}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!--右侧-->
+  <view wx:if="{{market.length!=0}}" class='right' bindtap='confirm' data-index='{{index}}'>
+    <view class='tag' wx:for="{{market}}">
+      <text style='color:#000;'>{{item.name}}</text>
+      <text class="dragText">药检</text>
+      <text style='color:#000;'>{{item.distanremark}}</text>
+    </view>
+  </view>
+  <!--如果无数据，则显示数据-->
+  <view class="right noData" wx:else>该地区暂无市场</view>
+</view>

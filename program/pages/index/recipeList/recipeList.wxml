@@ -1,0 +1,14 @@
+<!--pages/recipeList/recipeList.wxml-->
+<view class="container">
+  <view wx:for="{{foodslist}}" class='item'>
+    <view class="item" bindtap="detail">
+      <view class="itemTop">
+        <text>{{item.title}}</text>
+        <text>{{item.addtime}}</text>
+      </view>
+      <view class="itemContent">
+        <text>{{item.contents}}</text>
+      </view>
+    </view>
+  </view>
+</view>
