@@ -1,0 +1,126 @@
+/* pages/shopCar/confirm/confirm.wxss */
+
+page {
+  background: #f6f6f6;
+}
+
+text {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.common {
+  width: 100%;
+  background: #fff;
+}
+
+.address {
+  height: 80rpx;
+  border-top: 1rpx solid #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address-left {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.choose {
+  /* height: 184rpx; */
+  margin-top: 20rpx;
+}
+
+.choose-li {
+  width: 100%;
+  height: 60rpx;
+  border-bottom: 2rpx solid #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choose-text {
+  color: #f00;
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-right: 20rpx;
+}
+
+.choose-right {
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goods {
+  height: 300rpx;
+  margin-top: 20rpx;
+}
+
+.goods-list {
+  width: 100%;
+  height: 160rpx;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-down {
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.topay {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(to right, #fe6479, #ee2460);
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods-img {
+  width: 400rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20rpx;
+}
+
+.picture {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.addup {
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.price {
+  line-height: 80rpx;
+  font-size: 24rpx;
+  color: #888;
+  margin-right: 100rpx;
+}

@@ -1,0 +1,478 @@
+/* pages/shopPage/shopPage.wxss */
+@import '/pages/star/star';
+
+page {
+  height: 100%;
+}
+
+.container {
+  display: block;
+}
+
+.title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50rpx;
+  background: #fff;
+}
+
+.titleLeft {
+  margin-left: 40rpx;
+  display: flex;
+  align-items: center;
+  border: 1rpx;
+}
+
+.titleLeft text {
+  font-size: 32rpx;
+  color: #444;
+  font-weight: bold;
+}
+
+.titleRight {
+  margin-right: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.collection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30rpx;
+  width: 110rpx;
+  border: 1rpx solid #f74d71;
+  border-radius: 20rpx;
+  padding: 0 8rpx 0 5rpx;
+  margin-top: 5rpx;
+}
+
+.collection image {
+  width: 22rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+}
+
+.collection text {
+  font-size: 22rpx;
+  color: #f74d71;
+  font-weight: normal;
+}
+
+/* 星级和销量 */
+
+.sellAmount {
+  margin-top: 30rpx;
+}
+
+.sellContent {
+  display: flex;
+}
+
+.sellCommon {
+  margin-left: 20rpx;
+}
+
+.sellText {
+  width: 100%;
+  text-align: center;
+}
+
+.sellText text {
+  font-size: 24rpx;
+}
+
+.sellContent text:first-child {
+  margin-left: 40rpx;
+  margin-right: 10rpx;
+}
+
+/* 优惠券 */
+
+.discount {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.discountTitle text:first-child {
+  color: #ff8e65;
+  border: 1rpx solid #ff8e65;
+  padding: 0 10rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+}
+
+.discountTitle text:nth-child(2) {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.getTicket text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+/* tab切换页 */
+
+.topTab {
+  display: flex;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.tabItem {
+  flex: 1;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.tabItem text {
+  font-size: 30rpx;
+  display: block;
+  width: 90%;
+  padding: 13rpx 0;
+  margin: 0 auto;
+}
+
+.selected {
+  color: #f23b5e;
+  border-bottom: 5rpx solid #f23b5e;
+}
+
+/* 第0页 */
+
+.shopInfo {
+}
+
+.shopTitle {
+  margin: 20rpx 0 20rpx 30rpx;
+}
+
+.shopTitle text {
+  font-size: 32rpx;
+  color: #444;
+  letter-spacing: 1rpx;
+}
+
+.shopImage image {
+  width: 150rpx;
+  height: 120rpx;
+  margin-left: 30rpx;
+}
+
+.empty {
+  width: 100%;
+  height: 10rpx;
+  background: #eee;
+  margin-top: 16rpx;
+}
+
+.shopItem {
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.item text:first-child {
+  font-size: 32rpx;
+  color: #444;
+  letter-spacing: 1rpx;
+  display: block;
+  margin-left: 30rpx;
+}
+
+.item text:nth-child(2) {
+  width: 70%;
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+  margin-right: 30rpx;
+}
+
+/* 左侧tab切换样式 */
+
+.leftTab {
+  width: 200rpx;
+  height: 100%;
+  background: #f2f2f2;
+}
+
+.empty {
+  width: 1rpx;
+  height: 70rpx;
+}
+
+.tabTitle {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+}
+
+.tabTitle text {
+  line-height: 100rpx;
+}
+
+.active {
+  background: #fff;
+}
+
+.list {
+  display: flex;
+  height: 100%;
+}
+
+/* 第二页 评价 */
+
+.score {
+  display: flex;
+}
+
+.scoreLeft {
+  width: 49%;
+  text-align: center;
+  padding: 14rpx 0;
+}
+
+.scoreLeft text {
+  display: block;
+  margin-top: 5rpx;
+}
+
+.scoreLeft text:first-child {
+  color: #f23b5e;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.scoreLeft text:nth-child(2) {
+  font-size: 26rpx;
+  color: #444;
+}
+
+.scoreLeft text:nth-child(3) {
+  font-size: 24rpx;
+}
+
+.scoreRight {
+  width: 50%;
+  text-align: center;
+  padding: 14rpx 0;
+}
+
+.scoreContent {
+  display: flex;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
+}
+
+.scoreContent text {
+  font-size: 26rpx;
+  display: block;
+  margin-right: 14rpx;
+}
+
+.border {
+  width: 1rpx;
+  height: 130rpx;
+  border-right: 1rpx solid #ddd;
+  margin-top: 20rpx;
+}
+
+.empty2 {
+  width: 100%;
+  height: 10rpx;
+  background: #eee;
+  margin-top: 10rpx;
+}
+
+/* 评论tab */
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.commentItem {
+  width: 160rpx;
+  height: 50rpx;
+  background: #fee5e9;
+  margin-left: 30rpx;
+  text-align: center;
+  border-radius: 30rpx;
+}
+
+.commentItem text {
+  color: #444;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  display: block;
+}
+
+.satisfy {
+  background: #f74d71;
+}
+
+.satisfy text {
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  display: block;
+}
+
+/* 评论列表 */
+
+.commentList {
+  width: 100%;
+  padding: 20rpx 0 0 0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto;
+  padding: 20rpx 0;
+}
+
+.userInfo > image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.userInfo > text {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  color: #444;
+}
+
+.goodsInfo {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.goodsInfo text {
+  font-size: 24rpx;
+  color: #aaa;
+  margin-right: 20rpx;
+  display: block;
+}
+
+.commenText {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.commenText text {
+  display: block;
+  text-align: justify;
+  font-size: 28rpx;
+}
+
+.reply {
+  width: 86%;
+  margin: 0 auto;
+  background: #eee;
+  border-radius: 20rpx;
+  padding: 5rpx 30rpx;
+  margin-top: 16rpx;
+}
+
+.reply text {
+  font-size: 24rpx;
+  display: block;
+}
+
+.itemEmpty {
+  width: 100%;
+  background: #eee;
+  height: 10rpx;
+  margin-top: 20rpx;
+}
+
+/* 商家页面 */
+
+.goodsItemContent {
+  display: flex;
+  width: 530rpx;
+  align-items: center;
+  margin-left: 10rpx;
+  padding: 10rpx 0;
+}
+
+.goodsImg {
+  width: 130rpx;
+  height: 100rpx;
+  margin: 0 6rpx;
+}
+
+.shopCar {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.goodsTitle span {
+  font-size: 30rpx;
+  color: #444;
+}
+
+.goodsItemDetail > p:first-of-type {
+  font-size: 28rpx;
+  color: #a2a2a2;
+  padding: 6rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 370rpx;
+  display: block;
+}
+
+.goodsSellInfo span {
+  font-size: 22rpx;
+  color: #21a66a;
+  margin-top: 12rpx;
+  padding: 4rpx 0;
+}
+
+.goodsSellInfo span:nth-child(2) {
+  margin: 0 10rpx;
+}
+
+.goodsPrice span:first-child {
+  font-size: 20rpx;
+  color: #d81e06;
+}
+
+.goodsPrice span:nth-child(2) {
+  font-size: 28rpx;
+  color: #d81e06;
+}
+
+.goodsPrice span:last-child {
+  color: #a2a2a2;
+  font-size: 22rpx;
+  text-decoration: line-through;
+  margin-left: 6rpx;
+}
+
+.shopCar {
+  margin-right: 14rpx;
+  margin-bottom: 5rpx;
+}

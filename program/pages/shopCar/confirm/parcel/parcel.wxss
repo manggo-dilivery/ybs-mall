@@ -1,0 +1,63 @@
+/* pages/shopCar/confirm/parcel/parcel.wxss */
+
+text{
+  font-size: 28rpx;
+  color: #000;
+}
+
+.container{
+  border-top: 1rpx solid #f6f6f6;
+}
+
+.parcel-title{
+  width: 96%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parcel-li{
+  width: 96%;
+  height: 160rpx;
+  background: #f6f6f6;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parcel-left{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.parcel-img{
+  width: 120rpx;
+  height: 120rpx;
+  
+}
+
+.parcel-text{
+  width: 30%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20rpx;
+}
+
+.parcel-word{
+  font-size: 20rpx;
+  color: #888;
+}
+
+.parcel-price{
+  height: 120rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}

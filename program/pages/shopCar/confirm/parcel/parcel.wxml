@@ -1,0 +1,22 @@
+<!--pages/shopCar/confirm/parcel/parcel.wxml-->
+
+<view class='container'>
+  <!-- 包裹 -->
+  <view class='parcel-title'>
+    <text style='font-size:32rpx;'>包裹</text>
+    <text style='color:#888;'>共9件</text>
+  </view>
+  <!-- 商品清单 -->
+  <view class='parcel-li'>
+    <view class='parcel-left'>
+      <image src='../../../../images/fruit.jpg' class='parcel-img'></image>
+      <view class='parcel-text'>
+        <text>红富士苹果{{}}</text>
+        <text class='parcel-word'>规格 : {{}}500g</text>
+        <text class='parcel-word'>单价 : ¥{{}}7</text>
+        <text class='parcel-word'>数量 : {{}}1</text>
+      </view>
+    </view>
+    <text class='parcel-price'>¥{{}}7</text>
+  </view>
+</view>

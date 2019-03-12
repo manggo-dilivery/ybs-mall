@@ -1,0 +1,280 @@
+/* pages/shopCar/shopCar.wxss */
+
+text {
+  color: #000;
+}
+
+page {
+  background: #f6f6f6;
+}
+.container{
+    padding-top:50rpx;
+    padding-bottom: 90rpx;
+}
+.store {
+  width: 100%;
+  margin-top:10rpx;
+  background: #fff;
+}
+
+.storeName {
+  width: 98%;
+  height: 70rpx;
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.shopItem{
+     display: flex;
+    align-items: center;
+}
+.itemContent{
+    display: flex;
+}
+.itemInfo{
+    display: flex;
+    justify-content: space-between;
+    width:470rpx;
+    margin-left:20rpx;
+}
+.itemInfo text{
+    display: block;
+}
+.itemInfoleft text:first-child{
+    font-size:33rpx;
+    color:#444;
+}
+.itemInfoleft text:nth-child(2){
+    font-size:24rpx;
+    color:#999;
+    margin-top:5rpx
+}
+.itemContent > image{
+    width:180rpx;
+}
+.itemInfoRight image{
+    width:30rpx;
+    display: block;
+    margin: 0 auto;
+}
+.itemInfoRight text{
+    display: block;
+    margin-top:8rpx;
+    font-size: 24rpx;
+    color:#888;
+}
+.price{
+    margin-top:30rpx;
+}
+.price text{
+    color:#ff2e64;
+}
+/*加号和减号*/
+
+.contentNum{
+    display: flex;
+    align-items: center;
+    margin-top:20rpx;
+}
+.contentNum text:first-of-type{
+    display: block;
+    width:50rpx;
+    height: 42rpx;
+    font-size:34rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border-top-left-radius:5rpx;
+    border-bottom-left-radius:5rpx;
+    color:#aaa;
+    border:1rpx solid #ddd;
+}
+.contentNum text:nth-child(2){
+    display: block;
+    background: #fff;
+    width:50rpx;
+    height: 42rpx;
+    font-size:26rpx;
+    line-height: 40rpx;
+    text-align: center;
+    color:#555;
+    border:1rpx solid #ddd;
+}
+.contentNum text:nth-of-type(3){
+    display: block;
+    background: #fff;
+    width:50rpx;
+    height: 42rpx;
+    font-size:30rpx;
+    line-height: 34rpx;
+    text-align: center;
+    border-top-right-radius:5rpx;
+    border-bottom-right-radius:5rpx;
+    color:#ff2e64;
+    border:1rpx solid #ddd;
+}
+/* 小计 */
+.subtotal{
+    width:90%;
+    margin:0 auto;
+    text-align: right;
+}
+.subtotal text:first-child{
+    font-size:24rpx;
+    color:#999;
+}
+.subtotal text:last-child{
+    color:#f9376c;
+    font-size:32rpx;
+}
+/* 钩子 */
+.checkbox{
+    position: relative;
+}
+.checkbox image:first-child{
+    width:40rpx;
+    height:40rpx;
+}
+.checkbox image:last-child{
+    width:26rpx;
+    height: 26rpx;
+    position: absolute;
+    top:7rpx;
+    left:10rpx;
+}
+/*数值*/
+
+.numberadd input {
+  width: 60rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 26rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.shopCar-down {
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.down-left {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+.to-order {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(to right, #fe6479, #ee2460);
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all {
+  width: 40%;
+  font-size: 20rpx;
+  color: #888;
+}
+.delete{
+    width:100%;
+    height: 50rpx;
+    position: fixed;
+    z-index: 5;
+    top:0;
+    background: #fff;
+    text-align: center;
+    border-bottom:1rpx solid #dedede
+}
+.delete text:first-child{
+    display: block
+}
+.delete text:last-child{
+    position: fixed;
+    right: 20rpx;
+    top:5rpx;
+    z-index: 6;
+}
+/* 备注 */
+.mark{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.6);
+    z-index:7;
+}
+.textBox{
+    width:80%;
+    height: 630rpx;
+    position: fixed;
+    z-index:8;
+    background: #ffffed;
+    top:250rpx;
+    left:10%;
+    border-radius:16rpx;
+}
+.textTitle{
+    background: #f13655;
+    width: 100%;
+    height: 100rpx;
+    border-top-left-radius: 16rpx;
+    border-top-right-radius: 16rpx;
+    display: flex;
+    align-items: center;
+}
+.textTitle text{
+    color:#634239;
+    font-family: '微软雅黑';
+    font-size: 32rpx;
+    font-weight: bold;
+    letter-spacing: 4rpx;
+    display:block;
+    width: 100%;
+    padding: 10rpx 0;
+    border-bottom:1rpx solid #ffffed;
+    text-align: center;
+}
+.textContent{
+    width:96%;
+    height: 400rpx;
+    margin:0 auto;
+    border:1rpx solid #e4e7d4;
+    margin-top:10rpx;
+}
+.textContent textarea{
+    width: 90%;
+    margin:0 auto;
+    margin-top:20rpx;
+    height: 360rpx;
+}
+.submit{
+    width:80rpx;
+    height: 80rpx;
+    background: #e3d7c9;
+    border-radius:50%;
+    text-align: center;
+    margin:0 auto;
+    margin-top:16rpx;
+}
+.submit text{
+    height: 80rpx;
+    line-height: 80rpx;
+    color:#fefbf4;
+}

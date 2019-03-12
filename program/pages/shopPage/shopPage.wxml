@@ -1,0 +1,187 @@
+<!--pages/shopPage/shopPage.wxml-->
+<import src="/pages/star/star"/>
+<view class="container">
+    <view class="title">
+        <view class="titleLeft">
+            <text>{{shopInfo.shopname}}</text>
+            <view class="collection" bindtap="iscollect">
+                <image wx:if="{{showCollection==isShowCol?false:true}}" src="../../images/icon/collection.png"></image>
+                <image wx:if="{{showCollection==isShowCol?true:false}}" src='../../images/icon/Group131.png'></image>
+                <text wx:if="{{showCollection==isShowCol?false:true}}">收藏</text>
+                <text wx:if="{{showCollection==isShowCol?true:false}}">已收藏</text>
+            </view>
+        </view>
+        <!-- <view class="titleRight" bindtap="shopCar"> -->
+            <image src="../../images/icon/Group605.png" mode='widthFix' class="titleRight" bindtap="shopCar"></image>
+        <!-- </view> -->
+    </view>
+    <!-- 星级和销量 -->
+    <view class="sellAmount">
+        <view class="sellContent">
+            <text>综合体验</text>
+            <template is="star" data="{{starAmount}}"/>
+            <text class='sellCommon'>总销量 {{shopInfo.zs}}</text>
+        </view>
+    </view>
+    <!-- 店铺优惠券 -->
+    <!-- <view class="discount">
+        <view class="discountTitle">
+            <text>店铺优惠券</text>
+            <text>领取优惠券</text>
+        </view>
+        <view class="getTicket">
+            <text>领取</text>
+        </view>
+    </view> -->
+    <!-- tab切换 -->
+    <view class='topTab'>
+        <block wx:for="{{['商品','评价','商家']}}" wx:key='index'>
+            <view data-index='{{index}}' bindtap='tabChange' class='tabItem'>
+            <text class="{{currentIndex==index?'selected':''}}">{{item}}</text>
+            </view>
+        </block>
+    </view>
+    <!-- 商家 -->
+    <view hidden="{{currentIndex!=2}}">
+        <view class="shopInfo">
+            <view class="shopTitle"><text>商家信息</text></view>
+            <view class="shopImage">
+                <image src="{{shopInfo.dptp}}"></image>
+                <image src="{{shopInfo.yyzl}}"></image>
+                <image src="{{shopInfo.xkz}}"></image>
+                <image src="{{shopInfo.jkz}}"></image>
+            </view>
+        </view>
+        <view class="empty2"></view>
+        <view class="shopItem">
+            <view class="item">
+                <text>商家名称</text>
+                <text>{{shopInfo.shopname}}</text>
+            </view>
+            <view class="item">
+                <text>商家品类</text>
+                <text>{{shopInfo.sjpl}}</text>
+            </view>
+            <view class="item">
+                <text>商家地址</text>
+                <text>{{shopInfo.dz}}</text>
+            </view>
+            <view class="item">
+                <text>商家电话</text>
+                <text>{{shopInfo.sjdh}}</text>
+            </view>
+            <view class="item">
+                <text>营业时间</text>
+                <text>{{shopInfo.yysj}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 评价 -->
+    <view hidden="{{currentIndex!=1}}">
+        <view class="score">
+            <view class="scoreLeft">
+                <text>4.8</text>
+                <text>综合评分</text>
+                <text>高于周边商家55.8%</text>
+            </view>
+            <view class='border'></view>
+            <view class="scoreRight">
+                <view class="scoreContent">
+                    <text>商品评分</text>
+                    <template is="star" data="{{starAmount}}"/>
+                    <text>5.0</text>
+                </view>
+                <view class="scoreContent">
+                    <text>商品评分</text>
+                    <template is="star" data="{{starAmount}}"/>
+                    <text>5.0</text>
+                </view>
+                <view class="scoreContent">
+                    <text>商品评分</text>
+                    <text>29分钟</text>
+                </view>
+            </view>
+        </view>
+        <view class='comment'>
+            <view  bindtap='commentChange' data-feel='{{0}}' class="commentItem {{currentFeel==0?'satisfy':''}}">
+                <text>全部(999+)</text>
+            </view>
+            <view  bindtap='commentChange' data-feel='{{1}}' class="commentItem {{currentFeel==1?'satisfy':''}}">
+                <text>好评(999+)</text>
+            </view>
+            <view  bindtap='commentChange' data-feel='{{2}}' class="commentItem {{currentFeel==2?'satisfy':''}}">
+                <text>差评(3)</text>
+            </view>
+        </view>
+        <!-- 评论列表 -->
+        <view hidden="{{currentFeel!=0}}" class="commentList">
+            <view class="commenItem">
+                <view class="userInfo">
+                    <image src="../../images/1111.png"></image>
+                    <text>小丸子</text>
+                    <template is="star" data="{{starAmount}}"/>
+                </view>
+                <view class="goodsInfo">
+                    <text>2018-10-16</text>
+                    <text>生菜500g</text>
+                </view>
+                <view class="commenText">
+                    <text>生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。
+                    </text>
+                </view>
+                <view class="reply">
+                    <text>商家回复：您好，非常感谢您对余家菜园的支持，祝您生活愉快！【余家菜园】</text>
+                </view>
+                <view class="itemEmpty"></view>
+            </view>
+             <view class="commenItem">
+                <view class="userInfo">
+                    <image src="../../images/1111.png"></image>
+                    <text>小丸子</text>
+                    <template is="star" data="{{starAmount}}"/>
+                </view>
+                <view class="goodsInfo">
+                    <text>2018-10-16</text>
+                    <text>生菜500g</text>
+                </view>
+                <view class="commenText">
+                    <text>生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。生菜很新鲜很好，完美。
+                    </text>
+                </view>
+                <view class="reply">
+                    <text>商家回复：您好，非常感谢您对余家菜园的支持，祝您生活愉快！【余家菜园】</text>
+                </view>
+                <view class="itemEmpty"></view>
+            </view>
+        </view>
+    </view>
+    <!-- 商品 -->
+    <view hidden="{{currentIndex!=0}}" style='height:80%'>
+        <view class="list" >
+            <view class="leftTab">
+                <view wx:for="{{category}}" wx:key="index" data-index="{{index}}" class="{{currentTab==index?'active':''}} tabTitle" bindtap="changeTab">
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+            <view class="tempFood" hidden="{{currentTab==0?false:true}}">
+                <view class="goodsItemContent">
+                    <image class="goodsImg" src="../../images/fruit.jpg" alt=""></image>
+                    <view class="goodsItemDetail">
+                        <view class="goodsTitle">
+                            <span>绿鲜知 荷兰黄瓜 </span><span>约300g</span>
+                        </view>
+                        <p>清脆爽口，口感鲜嫩大大倒萨倒萨啊倒萨倒萨大大倒萨倒萨大声地说倒萨倒萨</p>
+                        <view class="goodsSellInfo">
+                            <span>已卖103份</span><span>|</span><span>98人查看</span>
+                        </view>
+                        <view class="goodsPrice">
+                            <span>￥</span><span>0.10</span><span>￥3.00</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>
+

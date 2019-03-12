@@ -1,0 +1,10 @@
+<!--pages/template/star/star.wxml-->
+<template name="star">
+    <view class="star">
+        <view class="starImage">
+            <block wx:for="{{starAmount}}" wx:key="{{index}}">
+                <image src='../../../../images/icon/Group131.png'></image>
+            </block>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,103 @@
+<!--pages/shopCar/shopCar.wxml-->
+<view class='container'>
+    <!-- 删除 -->
+    <view class="delete">
+        <text>购物车</text>
+        <text bindtap="delete">删除</text>
+    </view>
+  <view class='store' wx:for="{{itemInfo}}" wx:key="{{index}}">
+    <!--商家-->
+    <view class='storeName'>{{item.StoreInfo.name}}</view>
+    <!--商品-->
+        <view class='goods'  wx:for-item='goods' wx:for="{{item.CartProductList}}" wx:key="{{index}}">  
+            <view class="shopItem">
+                <view class="radio">
+                    <checkbox-group bindchange="checkboxChange" data-goodsId="{{goods.OrderProductInfoModel.cpid}}">
+                        <checkbox value="{{goods.OrderProductInfoModel.cpid}}" checked="{{goods.ischecked}}"></checkbox>
+                    </checkbox-group>
+                    <!-- <view class="checkbox" data-goodsId="{{goods.OrderProductInfoModel.cpid}}" bindtap='checkboxChange'>
+                        <image src='../../images/hookborder.png'></image>
+                        <image hidden='{{!goods.ischecked}}' src='../../images/hook.png'></image>
+                    </view> -->
+                </view>
+                <view class="itemContent">
+                    <image mode="widthFix" src="{{goods.OrderProductInfoModel.cptp}}"></image>
+                    <view>
+                        <view class="itemInfo">
+                            <view class="itemInfoleft">
+                                <text>{{goods.OrderProductInfoModel.spname}}</text>
+                                <text>{{goods.OrderProductInfoModel.spjj}}</text>
+                            </view>
+                            <view class="itemInfoRight" bindtap='showMark'>
+                                <image mode="widthFix" src="../../../images/icon/Group446.png"></image>
+                                <text>备注</text>
+                            </view>
+                        </view>
+                        <view class="itemInfo">
+                            <view class="price">
+                                <text>￥{{goods.OrderProductInfoModel.dj}}</text>
+                            </view>
+                            <view class="num">
+                                <view class="contentNum">
+                                    <text bindtap='sub'
+                                    data-goodsid="{{goods.OrderProductInfoModel.cpid}}" 
+                                    data-index="{{goods.OrderProductInfoModel.gmsl}}" 
+                                    data-shopid="{{goods.OrderProductInfoModel.ctid}}" 
+                                    data-mallid="{{goods.OrderProductInfoModel.scid}}"
+                                    data-weight="{{goods.OrderProductInfoModel.gg}}" 
+                                    data-price="{{goods.OrderProductInfoModel.dj}}" >―</text>
+                                    <!-- <input type="number" bindchange='inputChange' value="{{num}}"/> -->
+                                    <text>{{goods.OrderProductInfoModel.gmsl}}</text>
+                                    <text bindtap='add' 
+                                    data-goodsid="{{goods.OrderProductInfoModel.cpid}}" 
+                                    data-index="{{goods.OrderProductInfoModel.gmsl}}" 
+                                    data-shopid="{{goods.OrderProductInfoModel.ctid}}" 
+                                    data-mallid="{{goods.OrderProductInfoModel.scid}}"
+                                    data-weight="{{goods.OrderProductInfoModel.gg}}" 
+                                    data-price="{{goods.OrderProductInfoModel.dj}}" 
+                                     >+</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>
+        </view>
+        <view class="subtotal">
+            <text>小计：</text>
+            <text>￥{{item.goodsSum}}</text>
+        </view>
+  </view>
+  <!-- 底部结算 -->
+  <view class='shopCar-down'>
+    <view class='down-left'>
+      <view>
+        <checkbox-group bindchange="selectAll">
+            <checkbox color='#ff0000' checked='{{selectAll}}' value='1'>全选</checkbox>
+        </checkbox-group>
+      </view>
+
+      <view class='all'>
+        合计:
+        <text style='color:#ff0000;font-size:32rpx;'>¥{{totalSum||0}}</text>
+      </view>
+    </view>
+
+    <view class='to-order' bindtap='toConfirm'>去结算</view>
+  </view>
+    <!-- 备注 -->
+    <view class="mark" catchtap='hideMark' hidden='{{!showMark}}'>
+        <view class="textBox" catchtap='showMark'>
+            <view class="textTitle">
+                <text>请写下您对商品的需求</text>
+            </view>
+            <view class="textContent">
+                <textarea ></textarea>
+            </view>
+            <view class="submit" bindtap="goodsMark">
+                <text>OK</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,19 @@
+/* pages/template/star/star.wxss */
+.star{
+    display: flex;
+    align-items: center;
+}
+.starImage{
+    display: flex;
+    align-items: center;
+}
+.starImage image{
+    width:24rpx;
+    height: 24rpx;
+    display: block;
+    margin-right:10rpx;
+}
+.star text{
+    margin-left:10rpx;
+    display: block;
+}
