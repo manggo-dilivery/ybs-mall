@@ -1,0 +1,228 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false
+	},
+	"appid": "wx7856e9f86d50bd16",
+	"projectname": "weWebsite1111111",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 31,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "市场分类页面",
+					"pathName": "pages/index/markettype/markettype",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/center/center",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "设置",
+					"pathName": "pages/center/setting/setting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shopCar/shopCar",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "会员信息",
+					"pathName": "pages/center/setting/information/information",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "加盟合作",
+					"pathName": "pages/center/setting/cooperation/cooperation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "规则中心",
+					"pathName": "pages/center/setting/rule/rule",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "问题反馈",
+					"pathName": "pages/center/setting/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收货地址",
+					"pathName": "pages/center/setting/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的优惠券",
+					"pathName": "pages/center/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的余额",
+					"pathName": "pages/center/money/money",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/center/orders/orders",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/center/collect/collect",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "推荐码",
+					"pathName": "pages/center/QRcode/QRcode",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新增收货地址",
+					"pathName": "pages/center/setting/address/addAddress/addAddress",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "订单详情",
+					"pathName": "pages/center/orders/orderDetails/orderDetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "绑定银行卡",
+					"pathName": "pages/center/money/bankcard/bankcard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "支付密码设置",
+					"pathName": "pages/center/setting/password/password",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "菜谱",
+					"pathName": "pages/index/recipeList/recipeList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "菜谱详情",
+					"pathName": "pages/index/recipeList/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "生鲜分类",
+					"pathName": "pages/index/categoryList/categoryList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "结算确认订单",
+					"pathName": "pages/shopCar/confirm/confirm",
+					"query": ""
+				},
+				{
+					"id": 23,
+					"name": "确认购买商品清单",
+					"pathName": "pages/shopCar/confirm/parcel/parcel",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/shopPage/shopPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/center/money/pay/pay",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "修改账户密码",
+					"pathName": "pages/changePswd/changePswd",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录页面",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册页面",
+					"pathName": "pages/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录密码修改",
+					"pathName": "pages/center/setting/loginPassword/loginPassword",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "交易明细",
+					"pathName": "pages/center/money/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "找回密码",
+					"pathName": "pages/changePswd/changePswd"
+				}
+			]
+		}
+	}
+}
