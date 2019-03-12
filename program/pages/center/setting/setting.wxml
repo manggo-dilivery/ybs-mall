@@ -1,0 +1,30 @@
+<view class='setting'>
+  <view class='set-li' bindtap='information'>
+    会员信息
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+  <view class='set-li' bindtap='loginPassword'>
+    登录密码修改
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+  <view class='set-li' bindtap='payPassword'>
+    支付密码修改
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+  <view class='set-li' bindtap='address'>
+    收货地址
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+  <view class='set-li' bindtap='feedback'>
+    问题反馈
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+  <view class='set-li' bindtap='rule'>
+    规则中心
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+  <view class='set-li' bindtap='cooperation'>
+    加盟合作
+    <image src='../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+  </view>
+</view>

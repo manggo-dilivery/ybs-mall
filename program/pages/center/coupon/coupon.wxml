@@ -1,0 +1,27 @@
+<!--pages/center/coupon/coupon.wxml-->
+
+<view class='mycoupon'>
+  <block wx:for="{{['未使用','已失效']}}" wx:key='index'>
+    <view data-index='{{index}}' bindtap='tabChange' class='tabItem'>
+      <view class="{{currentIndex==index?'selected':''}}">{{item}}</view>
+    </view>
+  </block>
+</view>
+
+<view class='right'>
+  <view class='tag' wx:for="{{coupon}}">
+    <view class='coupon'>
+      {{item.yhmc}}
+      <text style='color:#f00'>{{item.yhxx}}</text>
+      <view>
+        <text>有效期 : {{item.kssj}}-</text>
+        <text>{{item.yxq}}</text>
+      </view>
+    </view>
+    <view class='coupon li-right'>
+      <text style='font-weight: 100;color: #f93057;margin-top:50rpx;'>¥</text>
+      <text style='color:#f93057;font-size:100rpx;font-weight:bold;'>{{item.yhje}}</text>
+    </view>
+  </view>
+
+</view>

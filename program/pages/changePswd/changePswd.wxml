@@ -1,0 +1,33 @@
+<!--pages/changePswd/changePswd.wxml-->
+<view>
+    <image class="cancel" src="../../images/icon/close1.png"></image>
+    <image class="logo" mode="widthFix" src="../../images/logo.png"></image>
+    <image class="backgroundImg" src="../../images/loginbg.png"></image>
+
+    <view class="option">
+        <text>请填写手机号、验证码、新密码，以完成新密码设置</text>
+    </view>
+    <view class="inputBox">
+        <view class="item">
+            <image src="../../images/icon/user.png"></image>
+            <input class="itemText" type="text" bindinput='getPhoneNum' placeholder='手机号'></input>
+        </view>
+        <view class="item">
+            <image src="../../images/icon/phone.png"></image>
+            <input class="itemText" type="text" bindinput="getCodePswd" placeholder='请输入验证码'></input>
+            <text class="verification" bindtap="getVertificate" hidden='{{!showTime==0}}'>获取验证码</text>
+            <text class="verification" hidden='{{!showTime==1}}'>{{time}}</text>
+        </view>
+        <view class="item">
+            <image src="../../images/icon/pass.png"></image>
+            <input class="itemText" type="text" bindinput='getPswd' placeholder='请输入密码'></input>
+        </view>
+        <button class="loginBtn" bindtap="codeLogin">提交</button>
+    </view>
+    
+    <view class="register">
+        <text bindtap='register'>用户注册</text>
+        <text bindtap='login'>用户登录</text>
+    </view>
+</view>
+

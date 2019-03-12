@@ -1,0 +1,6 @@
+<!--pages/center/setting/rule/rule.wxml-->
+<import src="../../../../wxParse/wxParse.wxml" />
+<view class='word'>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+</view>

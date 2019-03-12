@@ -1,0 +1,15 @@
+<!--pages/information/information.wxml-->
+<view class='information'>
+  <view class='information-li' bindtap='takePictures'>
+    修改头像
+    <view class='information-img'>
+      <image src='{{headportrait}}' class='centerImg'></image>
+      <image src='../../../../images/icon/ch.png' mode='widthFix' style='width:22rpx;'></image>
+    </view>
+  </view>
+
+  <view class='information-li' style='height:80rpx;'>
+    会员名
+    <text>{{user.phoneNum}}</text>
+  </view>
+</view>

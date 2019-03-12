@@ -1,0 +1,88 @@
+<!--pages/center/orders/orderDetails/orderDetails.wxml-->
+<view class='container'>
+
+  <view class='top-img'>
+    <text style='color:#fff;margin-bottom:120rpx;margin-left:50rpx;'>{{}}您的订单已成交完毕...</text>
+    <image src='../../../../images/order-wx.png' class='people' mode='aspectFit'></image>
+  </view>
+  <!-- 地址 -->
+  <view class='address'>
+    <image src='../../../../images/icon/order-location.png' style='width:80rpx;margin-left:20rpx;' mode='widthFix'></image>
+    <view class='address-text'>
+      <text>{{orderDetail.shr}} {{orderDetail.shrsj}}</text>
+      <text>{{orderDetail.shrdz}}</text>
+    </view>
+  </view>
+  <!-- 商品 -->
+  <view style='width:100%; display:flex;flex-direction:column;align-items: center;' wx:for="{{orderDetail.orderdata}}">
+    <view class='store'>
+      <image src='../../../../images/icon/store.png' mode='widthFix' style='width:40rpx;'></image>
+      <text style='color:#000;font-size:34rpx;margin-left:18rpx;'>{{item.ctname}}</text>
+    </view>
+    <view style='width:100%;' wx:for="{{item.orderdatagoods}}">
+      <view class='goods-li'>
+        <image src='{{item.sptp}}' style='height:180rpx;width:180rpx;'></image>
+        <view class='goods-name'>
+          <text>{{item.spcm}}</text>
+          <text>{{item.gg}}</text>
+        </view>
+        <text style='color:#999999;'>×{{item.sl}}</text>
+        <text>¥ {{item.jg}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品总价优惠配送费 -->
+  <view style='width:96%;'>
+    <view class='price'>
+      <text>商品总价</text>
+      <text>¥ {{orderDetail.goodsprice}}</text>
+    </view>
+    <view class='price'>
+      <text>优惠券</text>
+      <text>- ¥ {{orderDetail.yhje}}</text>
+    </view>
+    <view class='price'>
+      <text>配送费</text>
+      <text>+ ¥ {{orderDetail.psf}}</text>
+    </view>
+    <view class='price' style='border-top:1rpx dotted #dddddd;'>
+      <text style='color:#6c6a6b;'>实付款</text>
+      <text style='color:#e47347;'>¥ {{orderDetail.totleprice}}</text>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class='order-information'>
+    <text style='width:94%;font-size:34rpx;border-left:4rpx solid #fc7229;padding-left:2%;margin:20rpx 0;'>订单信息</text>
+    <view class='information-li'>
+      <text style='margin-right:30rpx;'>订单编号</text>
+      <text>{{orderDetail.ddbh}}</text>
+    </view>
+    <view class='information-li'>
+      <text style='margin-right:30rpx;'>生鲜市场</text>
+      <text>{{orderDetail.MarketName}}</text>
+    </view>
+    <view class='information-li'>
+      <text style='margin-right:30rpx;'>付款时间</text>
+      <text>{{orderDetail.zfsj}}</text>
+    </view>
+    <view class='information-li'>
+      <text style='margin-right:30rpx;'>送达时间</text>
+      <text>{{orderDetail.sdsj}}</text>
+    </view>
+    <view class='information-li'>
+      <text style='margin-right:30rpx;'>客户备注</text>
+      <text>{{}}</text>
+    </view>
+  </view>
+  <!--电话-->
+  <view class='call'>
+    <view class='call-one' bindtap='callCourier'>
+      <image src='../../../../images/icon/order-tel.png' mode='widthFix' class='common-img'></image>
+      <text>联系快递员</text>
+    </view>
+    <view class='call-one' bindtap='callService'>
+      <image src='../../../../images/icon/order-tel.png' mode='widthFix' class='common-img'></image>
+      <text>联系客服</text>
+    </view>
+  </view>
+</view>

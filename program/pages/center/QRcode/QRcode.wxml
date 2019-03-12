@@ -1,0 +1,8 @@
+<!--pages/center/QRcode/QRcode.wxml-->
+<view class='container'>
+  <image src='../../../images/logo.png' mode='aspectFit' class='img'></image>
+  <view class='box'>
+    <view class='code'>{{userId}}</view>
+    <view class='word'>推荐注册有奖励哦!</view>
+  </view>
+</view>

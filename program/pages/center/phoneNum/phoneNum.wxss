@@ -1,0 +1,22 @@
+/* pages/center/phoneNum/phoneNum.wxss */
+page{
+  background: #f6f6f6;
+}
+
+.customer-service{
+  width: 96%;
+  height: 100rpx;
+  background: #fff;
+  margin-top: 22rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.number{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

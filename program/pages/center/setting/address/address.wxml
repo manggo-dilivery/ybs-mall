@@ -1,0 +1,20 @@
+<!--pages/center/setting/address/address.wxml-->
+<view class='address'>
+  <view class='address-li' wx:for="{{addressList}}" bindtap='chooseAddress' data-index='{{index}}'>
+    <view style='margin-left:20rpx;height:100%;'>
+      <view style='height: 50%;'>
+        <text>{{item.lxr}} </text>
+        <text> {{item.lxrsim}}</text>
+      </view>
+      <view class='addr'>
+        <view class='label'>{{item.city}}</view>
+        <text>{{item.dizhi}}{{item.mno}}</text>
+      </view>
+    </view>
+    <image src='../../../../images/icon/Group123.png' class='common-img' mode='widthFix' bindtap='toChange' data-index='{{index}}'></image>
+  </view>
+</view>
+<!--添加收货地址按钮-->
+<view class='add-address' bindtap='addAddress'>
+  添加新的收货地址
+</view>

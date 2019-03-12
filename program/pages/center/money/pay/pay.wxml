@@ -1,0 +1,17 @@
+<!--pages/center/money/pay/pay.wxml-->
+<view class='container'>
+  <view class='choose'>
+    请选择充值方式
+    <image src='../../../../images/icon/Path264.png' style='width:30rpx;margin-right:10rpx;' mode='widthFix'></image>
+    <!-- <image src='../../../../images/icon/Path264_up.png' style='width:30rpx;margin-right:10rpx;' mode='widthFix'></image> -->
+  </view>
+  <view class='number'>
+    <view class='sum'>
+    ¥
+    <input placeholder='请填写充值金额' placeholder-style='font-size:26rpx;' bindblur='money'></input>
+    </view>
+    <text style='margin-left:10%;'>充值送积分哦!(每冲100元送50积分)</text>
+  </view>
+</view>
+
+<button class='save' bindtap='confirm'>确认充值</button>

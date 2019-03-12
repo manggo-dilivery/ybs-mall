@@ -1,0 +1,25 @@
+/* pages/center/collect/collect.wxss */
+page{
+  background: #f6f6f6;
+}
+
+.container{
+  background: #fff;
+  margin-top: 6rpx;
+}
+
+.goods-li{
+  width: 96%;
+  height: 160rpx;
+  border-bottom: 1rpx solid #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.goods-img{
+  width: 140rpx;
+  height: 120rpx;
+  border: 1rpx solid #f6f6f6;
+  margin-top: 20rpx;
+}

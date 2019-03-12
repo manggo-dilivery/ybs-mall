@@ -1,0 +1,13 @@
+<!--pages/center/collect/collect.wxml-->
+<view class='container'>
+  <!--收藏商品列表-->
+  <view class='goods-li' wx:for="{{goods}}">
+    <view style='display: flex;flex-direction: row;'>
+      <image src='{{item.tp}}' class='goods-img' hidden='{{item.tp==""}}'></image>
+      <image src='{{item.cptp}}' class='goods-img' hidden='{{item.cptp==""}}'></image>
+      <text style='margin:20rpx 30rpx;font-size:24rpx;' hidden='{{item.shopname==""}}'>{{item.shopname}}</text>
+      <text style='margin:20rpx 30rpx;font-size:24rpx;' hidden='{{item.cm==""}}'>{{item.cm}}</text>
+    </view>
+    <text style='color:#ff0000;font-size:28rpx;margin-top:20rpx;' bindtap='cancel' data-index='{{index}}'>取消收藏</text>
+  </view>
+</view>

@@ -1,0 +1,104 @@
+/* pages/center/orders/orderDetails/orderDetails.wxss */
+
+text{
+  color: #646464;
+}
+
+.top-img{
+  width: 100%;
+  height: 420rpx;
+  background: linear-gradient(to right,#ff6e80,#ea1857);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.people{
+  width: 280rpx;
+  height: 300rpx;
+}
+
+.address{
+  width: 100%;
+  height: 160rpx;
+  border-bottom: 10rpx solid #ededed;
+  display: flex;
+  align-items: center;
+}
+
+.address-text{
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20rpx;
+}
+
+.store{
+  width: 96%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goods-li{
+  width: 100%;
+  height: 200rpx;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx solid #ebebeb;
+}
+
+.goods-name{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.price{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price text{
+  color: #989898;
+}
+
+.order-information{
+  width: 100%;
+  border-top: 10rpx solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information-li{
+  width: 88%;
+}
+
+.call{
+  border-top: 10rpx solid #eeeeee;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.call-one{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-one text{
+  margin-left: 16rpx;
+}

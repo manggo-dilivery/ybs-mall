@@ -1,0 +1,48 @@
+/* pages/center/money/pay/pay.wxss */
+page{
+  background: #f6f6f6;
+}
+
+text{
+  font-size: 24rpx;
+}
+
+.container{
+  background: #fff;
+}
+
+.choose{
+  width: 98%;
+  height: 70rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #f6f6f6;
+  padding-left: 2%;
+}
+
+.number{
+  width: 100%;
+  height: 140rpx;
+  border-top: 1rpx solid #f6f6f6;
+}
+
+.sum{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 60rpx;
+  color: #888;
+  padding-left: 3%;
+}
+
+.sum input{
+  width: 80%;
+  outline: none;
+  font-size: 26rpx;
+  margin-left: 4%;
+}

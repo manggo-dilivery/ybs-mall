@@ -1,0 +1,2 @@
+/* pages/center/setting/rule/rule.wxss */
+@import "../../../../wxParse/wxParse.wxss";

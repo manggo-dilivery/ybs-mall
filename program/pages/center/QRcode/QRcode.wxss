@@ -1,0 +1,59 @@
+/* pages/center/QRcode/QRcode.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+text {
+  border: 1rpx solid black;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#fe6479, #ee2460);
+}
+
+.img {
+  border-radius: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 30rpx;
+  position: absolute;
+  top: 100rpx;
+  background: #fff;
+  z-index: 10;
+}
+
+.box {
+  width: 80%;
+  height: 800rpx;
+  position: absolute;
+  top: 190rpx;
+  border-radius: 24rpx;
+  text-align: center;
+  background: #fff;
+}
+
+.code {
+  margin-top: 160rpx;
+  font-size: 150rpx;
+  color: #ee2460;
+}
+
+.word {
+  width: 100%;
+  height: 80rpx;
+  background: #ebebeb;
+  color: #000;
+  font-size: 26rpx;
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  border-bottom-left-radius: 24rpx;
+  border-bottom-right-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

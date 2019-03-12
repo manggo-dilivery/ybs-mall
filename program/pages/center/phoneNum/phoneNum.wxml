@@ -1,0 +1,8 @@
+<!--pages/center/phoneNum/phoneNum.wxml-->
+<view class='customer-service'>
+  <text style='color:#666;'>客服电话</text>
+  <view class='number'>
+    <text style='color: #C0C0C0;'>027-86559130</text>
+    <text style='color: #C0C0C0;'>17786010504</text>
+  </view>
+</view>

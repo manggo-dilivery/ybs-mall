@@ -1,0 +1,21 @@
+<!--pages/center/money/bankcard/bankcard.wxml-->
+<view class='container'>
+  <view class='card-li'>
+    <text class='card-text'>银行卡号</text>
+    <input type='number' placeholder='请输入银行卡号' placeholder-class='card-placeholder' class='card-input' bindblur='cardNum' type='number'></input>
+  </view>
+  <view class='card-li'>
+    <text class='card-text'>银行卡户主</text>
+    <input placeholder='请输入银行卡户主' placeholder-class='card-placeholder' class='card-input' bindblur='cardName'></input>
+  </view>
+  <view class='card-li'>
+    <text class='card-text'>开户银行</text>
+    <input placeholder='请输入开户银行' placeholder-class='card-placeholder' class='card-input' bindblur='bank'></input>
+  </view>
+  <view class='card-li'>
+    <text class='card-text'>银行支行</text>
+    <input placeholder='请输入银行支行' placeholder-class='card-placeholder' class='card-input' bindblur='bankBranch'></input>
+  </view>
+</view>
+
+<button class='save' bindtap='save'>保存</button>

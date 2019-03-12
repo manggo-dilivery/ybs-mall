@@ -1,0 +1,44 @@
+<!--pages/center/orders/orders.wxml-->
+<view class='myorders'>
+  <block wx:for="{{['全部订单','待付款','待配送','待收货','待评价','售后']}}" wx:key='index'>
+    <view data-index='{{index}}' bindtap='tabChange' class='tabItem'>
+      <view class="{{currentIndex==index?'selected':''}}">{{item}}</view>
+    </view>
+  </block>
+</view>
+
+<!--订单列表 -->
+<view wx:for="{{orderList}}">
+  <view class='orders-list'>
+    <!--市场名字-->
+    <view class='shop-name'>
+      <view style='margin-left:20rpx;'>
+        <image src='../../../images/icon/store.png' class='store' mode='widthFix'></image>
+        <text style='color:#000;font-weight:bold;margin-left:20rpx;'>{{item.MarketName}}</text>
+      </view>
+      <text style='color:#e67e4b;margin-right:20rpx;'>{{item.zt}}</text>
+    </view>
+    <!-- 下单时间 -->
+    <view class='time'>
+      下单时间 : {{item.time}}
+    </view>
+    <!-- 商品 -->
+    <view class='goods' bindtap='orderDetails' data-index='{{index}}'>
+      <scroll-view scroll-x="true" style='white-space: nowrap;display:flex;margin-top:8rpx;'>
+        <view class='goods-li'>
+          <image src='{{item.sptp}}' class='goods-img' wx:for="{{item.orderdata}}"></image>
+        </view>
+      </scroll-view>
+    </view>
+    <!--合计-->
+    <view class='time' style='line-height: 80rpx;'>
+      <text>共 {{item.GoodsCounts}} 件商品</text>
+      <text style='margin-left:30rpx;'>合计 : ¥{{item.totleprice}}</text>
+      <view class='obligation' wx:if="{{item.zt=='待付款'}}">
+        <view class='toPay'>付款</view>
+        <view class='toPay' bindtap='cancel' data-index='{{index}}'>取消订单</view>
+      </view>
+    </view>
+
+  </view>
+</view>

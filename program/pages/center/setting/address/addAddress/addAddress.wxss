@@ -1,0 +1,79 @@
+/* pages/center/setting/address/addAddress/addAddress.wxss */
+
+page {
+  background: #f6f6f6;
+}
+
+.container {
+  margin-top: 20rpx;
+}
+
+.frist-li {
+  width: 100%;
+  height: 160rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address-li {
+  width: 96%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.li-word {
+  width: 20%;
+  line-height: 80rpx;
+  color: #000;
+  text-align: left;
+}
+
+.li-input {
+  width: 80%;
+  font-size: 26rpx;
+  color: #737373;
+}
+
+.input-text {
+  font-size: 26rpx;
+  line-height: 80rpx;
+  width: 80%;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.label-one {
+  height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #177cdb;
+  margin-right: 10rpx;
+  background: #f1f1f1;
+  /* margin: 0;
+  padding: 0; */
+}
+
+button::after {
+  border: none;
+}
+
+.switch-butt {
+  width: 100rpx;
+}
+
+.pitch-on{
+  height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  margin-right: 10rpx;
+  background: #eb1a5a;
+}

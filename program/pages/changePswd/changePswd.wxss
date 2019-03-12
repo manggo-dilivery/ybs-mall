@@ -1,0 +1,95 @@
+/* pages/changePswd/changePswd.wxss */
+page{
+    width:100%;
+    height: 100%;
+}
+.cancel{
+    width:40rpx;
+    height: 40rpx;
+    position: absolute;
+    top:60rpx;
+    left:60rpx;
+    z-index:5;
+}
+.backgroundImg{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+}
+.logo{
+    position:fixed;
+    z-index:5;
+    width:300rpx;
+    left:50%;
+    margin-left:-150rpx;
+    top:150rpx;
+}
+/* 输入手机号或密码 */
+.inputBox{
+    position: fixed;
+    top:500rpx;
+    width:460rpx;
+    left:50%;
+    margin-left:-230rpx;
+    z-index:5;
+}
+.item{
+    display:flex;
+    align-items: center;
+    padding: 20rpx 0;
+    border-bottom:1rpx solid #c6c0b4;
+}
+.item image{
+    width:30rpx;
+    height: 30rpx;
+    margin-right:30rpx;
+}
+.itemText{
+    font-size: 26rpx;
+    color:#c6c0b4;
+    letter-spacing: 2rpx;
+    width:260rpx;
+}
+.loginBtn{
+    background: linear-gradient(to right,#ff697c,#ea1f5e);
+    color:#fff;
+    position: fixed;
+    width:460rpx;
+    top:840rpx;
+    left:50%;
+    margin-left:-230rpx;
+    border-radius:50rpx;
+    letter-spacing: 6rpx;
+}
+.register{
+    position: fixed;
+    bottom:190rpx;
+    width:460rpx;
+    left:50%;
+    margin-left:-230rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.register text{
+    color:#fff;
+}
+.verification{
+    font-size: 26rpx;
+    color:#e7dde5;
+    width:140rpx;
+    text-align: center;
+}
+
+.option{
+    position: fixed;
+    z-index: 5;
+    top:440rpx;
+    width:100%;
+    text-align: center;
+}
+.option text{
+    color:#736f6e;
+    font-size: 24rpx;
+}

@@ -1,0 +1,10 @@
+<!--pages/center/money/detail/detail.wxml-->
+<view class='container' wx:for="{{list}}">
+  <view class='detail-li'>
+  <text style='margin:10rpx;'>{{item.jylx}}</text>
+  <view class='detail-right'>
+  <text>+{{item.jyje}}</text>
+  <text style='color:#888;font-size:24rpx;'>{{item.jysj}}</text>
+  </view>
+  </view>
+</view>

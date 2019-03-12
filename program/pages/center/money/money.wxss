@@ -1,0 +1,70 @@
+/* pages/center/money/money.wxss */
+
+page {
+  background: #f6f6f6;
+}
+
+text {
+  color: #fff;
+}
+
+.number {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25%;
+}
+
+.detail {
+  width: 96%;
+  height: 120rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.detail-li {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pay {
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-text {
+  color: #fff;
+  position: absolute;
+  top: 32%;
+  left: 42%;
+}
+
+.mycard{
+  width: 96%;
+  height: 80rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.line{
+  width: 30%;
+  height: 1rpx;
+  border-top: 1rpx solid #888;
+}

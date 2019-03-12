@@ -1,0 +1,49 @@
+<!--pages/center/center.wxml-->
+<view class='container'>
+  <!--背景图-->
+  <image src='../../images/Subtraction88.png' class='backg' mode='widthFix'></image>
+  <!--设置-->
+  <image src='../../images/icon/Group488.png' class='setting' mode='widthFix' bindtap='toSet'></image>
+  <!--个人信息-->
+  <view class='center'>
+    <!--头像-->
+    <image class='centerImg' src='{{memberCenter.personlogo}}'></image>
+    <!-- <view class='centerImg'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view> -->
+    <!--文字-->
+    <text style='font-size:36rpx;'>{{memberCenter.name}}</text>
+    <!-- <open-data type="userNickName" style='font-size:36rpx;color:#fff;'></open-data> -->
+    <!--优惠券余额-->
+    <view class='money'>
+      <view class='sale' bindtap='toCoupon'>
+        <text style='font-size:36rpx;'>{{memberCenter.yhq}}</text>
+        <text>优惠券</text>
+      </view>
+      <view class='sale' bindtap='toMymoney'>
+        <text style='font-size:36rpx;'>{{memberCenter.zhye}}</text>
+        <text>账户余额</text>
+      </view>
+    </view>
+    <!--订单-->
+    <view class='orders'>
+      <block wx:for="{{orderForm}}" wx:key="index">
+        <view class='orders-li' bindtap='toOrders' data-index='{{index}}'>
+          <image src='{{item.img}}' class='common-img' mode='widthFix'></image>
+          <text style='margin-top:20rpx;'>{{item.text}}</text>
+        </view>
+      </block>
+    </view>
+    <!--常用工具-->
+    <text style='color:#000;margin-top:80rpx;font-weight:700;font-size:32rpx;'>常用工具</text>
+    <view class='tool'>
+      <block wx:for="{{tools}}" wx:key="index">
+        <view class='tool-li' bindtap='toCollect' data-index='{{index}}'>
+          <image src='{{item.img}}' mode='widthFix' class='common-img'></image>
+          <text style='color:#000;margin-top:16rpx;'>{{item.text}}</text>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</view>

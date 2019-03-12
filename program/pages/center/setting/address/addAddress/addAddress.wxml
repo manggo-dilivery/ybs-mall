@@ -1,0 +1,50 @@
+<!--pages/center/setting/address/addAddress/addAddress.wxml-->
+<view class='container'>
+  <view class='frist-li'>
+    <view class='address-li' style='border-bottom: 1rpx solid #ebebeb;'>
+      <text class='li-word'>收货地址</text>
+      <view class='input-text' style='color:#737373;' bindtap='toMap'>{{address}}</view>
+      <!-- <view class='input-text' style='color:#737373;' bindtap='toMap' hidden='{{addrId==0}}'>{{getAddress.dizhi}}</view> -->
+    </view>
+    <view class='address-li'>
+      <text class='li-word'>门牌号</text>
+      <input class='li-input' placeholder='例:6号楼606室' placeholder-class='input-text' value="{{houseNum}}" bindblur='houseNum'></input>
+    </view>
+  </view>
+
+  <view class='frist-li' style='margin-top:18rpx;'>
+    <view class='address-li' style='border-bottom: 1rpx solid #ebebeb;'>
+      <text class='li-word'>联系人</text>
+      <input class='li-input' placeholder='您的姓名' placeholder-class='input-text' value="{{name}}" bindblur='name'></input>
+    </view>
+    <view class='address-li'>
+      <text class='li-word'>手机号</text>
+      <input class='li-input' placeholder='配送员联系您的手机号' placeholder-class='input-text' type='number' value="{{phoneNum}}" bindinput='phoneNum' maxlength="11"></input>
+    </view>
+  </view>
+
+  <view class='frist-li' style='margin-top:18rpx;height:80rpx;'>
+    <view class='address-li'>
+      <text class='li-word'>标签</text>
+      <view class='label' wx:for="{{label}}">
+        <button bindtap='pitchOn' data-index='{{index}}' class='{{pitchOn==index?"pitch-on":"label-one"}}'>{{item}}</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='frist-li' style='margin-top:18rpx;height:80rpx;'>
+    <view class='address-li'>
+      <text class='li-word'>默认地址</text>
+      <switch class='switch-butt' color='#eb1a5a' checked="{{isdefault==1?true:false}}" bindchange="switchChange" />
+    </view>
+  </view>
+
+  <view class='frist-li' style='margin-top:18rpx;height:80rpx;'>
+    <view class='address-li'>
+      <text class='li-word'>地址删除</text>
+      <switch class='switch-butt' color='#eb1a5a' checked="{{zt==1?false:true}}" bindchange="deleteaddr" />
+    </view>
+  </view>
+</view>
+
+<button class='save' bindtap='save'>保存</button>
