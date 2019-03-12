@@ -1,0 +1,77 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/message/message",
+    "pages/shopCar/shopCar",
+    "pages/changePswd/changePswd",
+    "pages/register/register",
+    "pages/shopCar/confirm/confirm",
+    "pages/shopCar/confirm/parcel/parcel",
+    "pages/center/center",
+    "pages/shopPage/shopPage",
+    "pages/star/star",
+    "pages/index/markettype/markettype",
+    "pages/index/categoryList/categoryList",
+    "pages/index/recipeList/recipeList",
+    "pages/index/categoryList/moreCategory/moreCategory",
+    "pages/index/categoryList/goodsDetail/goodsDetail",
+    "pages/index/recipeList/detail/detail",
+    "pages/center/setting/setting",
+    "pages/center/coupon/coupon",
+    "pages/center/money/money",
+    "pages/center/orders/orders",
+    "pages/center/collect/collect",
+    "pages/center/QRcode/QRcode",
+    "pages/center/phoneNum/phoneNum",
+    "pages/center/setting/information/information",
+    "pages/center/setting/loginPassword/loginPassword",
+    "pages/center/setting/password/password",
+    "pages/center/setting/address/address",
+    "pages/center/setting/address/addAddress/addAddress",
+    "pages/center/setting/feedback/feedback",
+    "pages/center/setting/rule/rule",
+    "pages/center/setting/cooperation/cooperation",
+    "pages/center/money/detail/detail",
+    "pages/center/money/pay/pay",
+    "pages/center/money/bankcard/bankcard",
+    "pages/center/orders/orderDetails/orderDetails"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/homeActive.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/icon/message.png",
+        "selectedIconPath": "images/icon/message_.png"
+      },
+      {
+        "pagePath": "pages/shopCar/shopCar",
+        "text": "购物车",
+        "iconPath": "images/icon/shoppingcar.png",
+        "selectedIconPath": "images/icon/shoppingcar_.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mine_.png"
+      }
+    ]
+  }
+}
